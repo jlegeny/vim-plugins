@@ -1,0 +1,27 @@
+[submodule "vim-airline"]
+	path = vim-airline
+	url = git@github.com:bling/vim-airline.git
+[submodule "plantuml-syntax"]
+	path = plantuml-syntax
+	url = git@github.com:aklt/plantuml-syntax.git
+[submodule "ag"]
+	path = ag
+	url = git@github.com:rking/ag.vim
+[submodule "vim-table-mode"]
+	path = vim-table-mode
+	url = git@github.com:dhruvasagar/vim-table-mode
+[submodule "vim-numbertoggle"]
+	path = vim-numbertoggle
+	url = git@github.com:lirenlin/vim-numbertoggle.git
+[submodule "airline-tablemode"]
+	path = airline-tablemode
+	url = git@github.com:retorillo/airline-tablemode.vim
+[submodule "vim-colorschemes"]
+	path = vim-colorschemes
+	url = git@github.com:flazz/vim-colorschemes.git
+[submodule "vim-jsdoc"]
+	path = vim-jsdoc
+	url = git@github.com:heavenshell/vim-jsdoc.git
+[submodule "vim-windowswap"]
+	path = vim-windowswap
+	url = git@github.com:wesQ3/vim-windowswap.git
