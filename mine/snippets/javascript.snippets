@@ -1,0 +1,64 @@
+# Promise
+snippet promise
+	return new Promise(function(fulfill, reject) {
+		${0}
+	});
+
+# DB Query
+snippet que
+	db.query(${1})
+	.on('error', errorCallback(reject, "${2}"))
+	.on('result', function(res) {
+		${0}
+	})
+	.on('end', function(info) {
+	});
+
+# DB query without result callback
+snippet qnr
+	db.query(${1})
+	.on('error', errorCallback(reject, "${2}"))
+	.on('end', function(info) {
+		${0}
+	});
+
+# Prepared statement
+snippet dbp
+	var ${1} = db.prepare(
+		'${0}'
+	);
+
+# POST request
+snippet post
+	router.post('${0}', function(req, res) {
+		console.log(req.url);
+
+		${1}
+	});
+
+# Anonymous function assigned to variable
+snippet vfa
+	var ${1:function_name} = function (${2}) {
+		${0}
+	};
+
+# Function assigned to variable
+snippet vf
+	var ${1:function_name} = function $1(${2}) {
+		${0}
+	};
+
+snippet g
+	function (${1}) {
+		${0}
+	};
+
+snippet g)
+	function (${1}) {
+		${0}
+	});
+
+snippet g,
+	function (${1}) {
+		${0}
+	},
