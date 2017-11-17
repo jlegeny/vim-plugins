@@ -52,7 +52,7 @@
 "}}}
 " Initialisation:"{{{
 " ----------------------------------------------------------------------------
-if !has("gui_running") && &t_Co < 256
+if !(has("gui_running") || has("gui_vimr")) && &t_Co < 256
   finish
 endif
 
@@ -76,7 +76,7 @@ let colors_name = "hybrid"
 "}}}
 " GUI And Cterm Palettes:"{{{
 " ----------------------------------------------------------------------------
-if has("gui_running")
+if (has("gui_running") || has("gui_vimr")) 
   let s:vmode      = "gui"
   let s:background = "#1d1f21"
   let s:foreground = "#c5c8c6"
@@ -235,7 +235,7 @@ exe "let s:fmt_stnd      = ' ".s:vmode."=NONE".s:s.      " term=NONE".s:s    ."'
 exe "let s:fmt_revr      = ' ".s:vmode."=NONE".s:r.      " term=NONE".s:r    ."'"
 exe "let s:fmt_revb      = ' ".s:vmode."=NONE".s:r.s:b.  " term=NONE".s:r.s:b."'"
 
-if has("gui_running")
+if (has("gui_running") || has("gui_vimr")) 
   exe "let s:sp_none       = ' guisp=".s:none      ."'"
   exe "let s:sp_foreground = ' guisp=".s:foreground."'"
   exe "let s:sp_background = ' guisp=".s:background."'"
@@ -334,7 +334,7 @@ exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
 "		WildMenu"
 
 " Use Xresources for background colour
-if has('gui_running') || (g:hybrid_use_Xresources != 1 && g:hybrid_use_iTerm_colors != 1)
+if (has("gui_running") || has("gui_vimr")) || (g:hybrid_use_Xresources != 1 && g:hybrid_use_iTerm_colors != 1)
   exe "hi! Normal"        .s:fg_foreground  .s:bg_background  .s:fmt_none
 else
   exe "hi! Normal"        .s:fg_foreground  .s:bg_none        .s:fmt_none
